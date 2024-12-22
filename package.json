@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "x3d-image": "^1.0.95",
+    "express": "*"
+  }
+}
