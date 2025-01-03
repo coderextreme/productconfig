@@ -13,8 +13,8 @@
   <Scene>
     <Background skyColor='1.000 1.000 1.000'/>
     <NavigationInfo type='"EXAMINE" "FLY" "WALK" "ANY"' />
-        <Viewpoint DEF='Front_View' description='Front View' position='0 1.5 25'/>
-        <Transform rotation="1 0 0 0.385" DEF="shapeContainer"></Transform>
+        <Viewpoint DEF='Front_View' description='Front View' position='0 0 60'/>
+        <Group DEF="shapeContainer"></Group>
 	<Script url='"facs.js"'/>
   </Scene>
 </X3D>

@@ -8,6 +8,10 @@ function getBlueColor() {
     return new SFColor(0.0, 0.0, 1.0);
 }
 
+function getGreenColor() {
+    return new SFColor(0.0, 1.0, 0.0);
+}
+
 function getBlackColor() {
     return new SFColor(0.0, 0.0, 0.0);
 }
@@ -42,15 +46,29 @@ function generateShapes(targetDirectory, targetStart, targetExtension) {
 		var file = files[i].replaceAll('\\','/');
 	
 
-		var rectshape = Browser.currentScene.createNode('Shape');
-		var rectgeometry = Browser.currentScene.createNode('Rectangle2D');
-		rectgeometry.size = new SFVec2f(2.5, 2.5);
-		var rectappearance = Browser.currentScene.createNode('Appearance');
-		var rectmaterial = Browser.currentScene.createNode('Material');
-		rectmaterial.diffuseColor = getBlueColor();
-		rectappearance.material = rectmaterial;
-		rectshape.geometry = rectgeometry;
-		rectshape.appearance = rectappearance;
+		var blueshape = Browser.currentScene.createNode('Shape');
+		var bluegeometry = Browser.currentScene.createNode('Rectangle2D');
+		bluegeometry.size = new SFVec2f(2.5, 2.5);
+		var blueappearance = Browser.currentScene.createNode('Appearance');
+		var bluematerial = Browser.currentScene.createNode('Material');
+		bluematerial.diffuseColor = getBlueColor();
+		blueappearance.material = bluematerial;
+		blueshape.geometry = bluegeometry;
+		blueshape.appearance = blueappearance;
+
+		var greenshape = Browser.currentScene.createNode('Shape');
+		var greengeometry = Browser.currentScene.createNode('Rectangle2D');
+		greengeometry.size = new SFVec2f(2.5, 2.5);
+		var greenappearance = Browser.currentScene.createNode('Appearance');
+		var greenmaterial = Browser.currentScene.createNode('Material');
+		greenmaterial.diffuseColor = getGreenColor();
+		greenappearance.material = greenmaterial;
+		greenshape.geometry = greengeometry;
+		greenshape.appearance = greenappearance;
+
+		var switch1 = Browser.currentScene.createNode('Switch');
+		switch1.children = new MFNode(blueshape, greenshape);
+		switch1.whichChoice = 0;
 
 
 		var transform = Browser.currentScene.createNode('Transform');
@@ -67,15 +85,33 @@ function generateShapes(targetDirectory, targetStart, targetExtension) {
 		transform.scale.z = 0.30;
 
 		var touchSensor = Browser.currentScene.createNode('TouchSensor');
-		var basename = file.replace(/.*\//, "");
+		var booleanTrigger = Browser.currentScene.createNode('BooleanTrigger');
+		var integerSequencer = Browser.currentScene.createNode('IntegerSequencer');
+		integerSequencer.key = new MFInt32(0, 1);
+		integerSequencer.keyValue = new MFInt32(1, 0);
+
+	        var basename = file.replace(/.*\//, "");
 		if (bodyPart == def_prefixes.length) {
-			touchSensor.description = basename.substring(3, basename.length-4)+" All Body Parts";
+			var description = basename.substring(3, basename.length-4)+" All Body Parts";
 		} else {
-			touchSensor.description = basename.substring(3, basename.length-4)+" "+def_prefixes[bodyPart];
+			var description = basename.substring(3, basename.length-4)+" "+def_prefixes[bodyPart];
 		}
+		touchSensor.description = description;
+
+		var DEF = description.replaceAll(" ", "");
+		Browser.currentScene.addNamedNode(DEF, touchSensor);
+		Browser.currentScene.addNamedNode(DEF+"Switch", switch1);
+		Browser.currentScene.addNamedNode(DEF+"IntegerSequencer", integerSequencer);
+		Browser.currentScene.addNamedNode(DEF+"BooleanTrigger", booleanTrigger);
 
 		transform.children.push(touchSensor);
-		transform.children.push(rectshape);
+		transform.children.push(switch1);
+		transform.children.push(integerSequencer);
+		transform.children.push(booleanTrigger);
+
+		var touchRoute = Browser.addRoute(touchSensor, "touchTime",  booleanTrigger, "set_triggerTime")
+		var triggerRoute = Browser.addRoute(booleanTrigger, "triggerTrue", integerSequencer, "next")
+		var sequencerRoute = Browser.addRoute(integerSequencer, "value_changed",  switch1, "whichChoice")
 
 		shapeContainer.children.push(transform);
 	}
@@ -91,7 +127,6 @@ function generateShapes(targetDirectory, targetStart, targetExtension) {
 
 	fontStyle.size = 1.0;
 	fontStyle.spacing = 1.2;
-	fontStyle.justify = '"MIDDLE" "MIDDLE"';
 	fontStyle.horizontal = false;
         textgeometry.fontStyle = fontStyle;
 
@@ -108,6 +143,9 @@ function generateShapes(targetDirectory, targetStart, targetExtension) {
 	texttransform.children.push(textshape);
 	shapeContainer.children.push(texttransform);
     }
+    var xml = Browser.currentScene.toXMLString();
+    console.log(xml);
+    // fs.writeFileSync("FACSApp.x3d", xml);
 }
 function initialize() {
     var targetDirectory = 'C:/Users/jcarl/ci2had/resources/';
