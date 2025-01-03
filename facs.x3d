@@ -14,6 +14,9 @@
     <Background skyColor='1.000 1.000 1.000'/>
     <NavigationInfo type='"EXAMINE" "FLY" "WALK" "ANY"' />
         <Viewpoint DEF='Front_View' description='Front View' position='0 0 60'/>
+	<Transform translation="-35 -20 0">
+		<Inline url='"JinHead.x3d"'/>
+	</Transform>
         <Group DEF="shapeContainer"></Group>
 	<Script url='"facs.js"'/>
   </Scene>
