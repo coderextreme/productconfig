@@ -143,8 +143,8 @@ function generateShapes(targetDirectory, targetStart, targetExtension) {
 	texttransform.children.push(textshape);
 	shapeContainer.children.push(texttransform);
     }
-    var xml = Browser.currentScene.toXMLString();
-    console.log(xml);
+    // var xml = Browser.currentScene.toXMLString();
+    // console.log(xml);
     // fs.writeFileSync("FACSApp.x3d", xml);
 }
 function initialize() {
