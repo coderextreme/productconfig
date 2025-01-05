@@ -34,13 +34,25 @@ def add_filters():
                     checkbox = ttk.Checkbutton(checkbox_inner_frame, text=str(val), variable=var)
                     checkbox.pack(anchor=tk.W)
 
+        # Add a checkbox to select all values for this property name
+        select_all_var = tk.BooleanVar()
+        select_all_checkbox = ttk.Checkbutton(checkbox_inner_frame, text=f"Select all {prop} values", variable=select_all_var)
+        select_all_checkbox.pack(anchor=tk.W)
+
+        # Function to update the state of individual checkboxes based on the "Select all" checkbox
+        def update_checkboxes(*args):
+            for val, var in checkbox_vars[prop]:
+                var.set(select_all_var.get())
+
+        select_all_var.trace_add("write", update_checkboxes)
+
     # Function to execute the query based on selected properties
     def execute_query():
         selected_values = []
         for prop, vals in checkbox_vars.items():
             for val, var in vals:
                 if var.get():
-                    selected_values.append(val)
+                    selected_values.append((prop, val))
         if not selected_values:
             # Clear previous results
             for row in tree.get_children():
@@ -48,8 +60,11 @@ def add_filters():
             tree.insert("", "end", values=("No properties selected.", "", ""))
             return
 
-        query = f"SELECT ID, PROPERTY_NAME, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE FROM Objects WHERE {' OR '.join([f'INTEGER_VALUE = ? OR TEXT_VALUE = ? OR BOOLEAN_VALUE = ? OR BLOB_VALUE = ? OR REAL_VALUE = ? OR NUMERIC_VALUE = ?' for _ in selected_values])}"
-        cursor.execute(query, tuple(selected_values * 6))
+        query = f"SELECT ID, PROPERTY_NAME, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE FROM Objects WHERE {' OR '.join([f'(PROPERTY_NAME = ? AND (INTEGER_VALUE = ? OR TEXT_VALUE = ? OR BOOLEAN_VALUE = ? OR BLOB_VALUE = ? OR REAL_VALUE = ? OR NUMERIC_VALUE = ?))' for _ in selected_values])}"
+        params = []
+        for prop, val in selected_values:
+            params.extend([prop, val, val, val, val, val, val])
+        cursor.execute(query, tuple(params))
         results = cursor.fetchall()
 
         # Clear previous results
@@ -147,8 +162,7 @@ def search_filename():
         id_value = row[0]
         property_name = row[1]
         non_none_values = [value for value in row[2:] if value is not None]
-        value_str = ", ".join(map(str, non_none_values))
-        tree.insert("", "end", values=(id_value, property_name, value_str))
+
 
 # Create a button to execute the filename search
 search_button = ttk.Button(filename_frame, text="Search", command=search_filename)

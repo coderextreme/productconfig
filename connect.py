@@ -65,10 +65,27 @@ def grabMetadata(data, parent):
                         svalue = None
                     setid = ID.genId()
                     result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, TEXT_VALUE)  VALUES (?, ?, ?)", (parent, 'name', name))
+                elif d == "Material":
+                    setid = ID.genId()
                 else:
                     setId = ID.genId()
                     grabMetadata(data[d], setId)
-                if d == "MetadataSet":
+                if d == "Material":
+                    try:
+                        diffuseColor = data[d]['@diffuseColor']
+                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'color', setid))
+                        for (c, component) in enumerate(diffuseColor):
+                            if c == 0:
+                                result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (setid, 'red', component))
+                            elif c == 1:
+                                result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (setid, 'green', component))
+                            elif c == 2:
+                                result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (setid, 'blue', component))
+                            elif c == 3:
+                                result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (setid, 'alpha', component))
+                    except KeyError:
+                        diffuseColor = None
+                elif d == "MetadataSet":
                     # print(f"{d} {name} {mvalue} {svalue}")
                     result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'metadataset', setid))
                     grabMetadata(data[d], setid)
