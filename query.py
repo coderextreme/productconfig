@@ -2,7 +2,6 @@ import sqlite3
 import tkinter as tk
 from tkinter import ttk
 
-# Function to add filters based on property names
 def add_filters():
     # Fetch distinct property names from the database
     cursor.execute("SELECT DISTINCT PROPERTY_NAME FROM Objects")
@@ -13,8 +12,11 @@ def add_filters():
 
     # Create checkboxes for each property name and its top 10 unique values
     for prop in property_names:
-        prop_label = ttk.Label(checkbox_inner_frame, text=prop)
-        prop_label.pack(anchor=tk.W)
+        # Create a frame for each property group
+        prop_frame = ttk.LabelFrame(checkbox_inner_frame, text=prop)
+        prop_frame.pack(fill=tk.X, padx=5, pady=5, anchor=tk.W)
+
+        # Query and create checkboxes for unique values
         cursor.execute(f"""
             SELECT INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE
             FROM Objects
@@ -23,28 +25,24 @@ def add_filters():
             ORDER BY COUNT(*) DESC
             LIMIT 10
         """, (prop,))
+
         values = cursor.fetchall()
         unique_values = set()
+
         for value in values:
             for val in value:
                 if val is not None and val not in unique_values:
                     unique_values.add(val)
                     var = tk.BooleanVar()
                     checkbox_vars[prop].append((val, var))
-                    checkbox = ttk.Checkbutton(checkbox_inner_frame, text=str(val), variable=var)
+                    checkbox = ttk.Checkbutton(
+                        prop_frame,
+                        text=str(val),
+                        variable=var,
+                        onvalue=True,
+                        offvalue=False
+                    )
                     checkbox.pack(anchor=tk.W)
-
-        # Add a checkbox to select all values for this property name
-        select_all_var = tk.BooleanVar()
-        select_all_checkbox = ttk.Checkbutton(checkbox_inner_frame, text=f"Select all {prop} values", variable=select_all_var)
-        select_all_checkbox.pack(anchor=tk.W)
-
-        # Function to update the state of individual checkboxes based on the "Select all" checkbox
-        def update_checkboxes(*args):
-            for val, var in checkbox_vars[prop]:
-                var.set(select_all_var.get())
-
-        select_all_var.trace_add("write", update_checkboxes)
 
     # Function to execute the query based on selected properties
     def execute_query():
@@ -149,7 +147,11 @@ def search_filename():
         tree.insert("", "end", values=("No filename entered.", "", ""))
         return
 
-    query = f"SELECT ID, PROPERTY_NAME, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE FROM Objects WHERE TEXT_VALUE LIKE ? COLLATE NOCASE"
+    query = """
+    SELECT ID, PROPERTY_NAME, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE
+    FROM Objects
+    WHERE TEXT_VALUE LIKE ? COLLATE NOCASE
+    """
     cursor.execute(query, (f"%{filename}%",))
     results = cursor.fetchall()
 
@@ -157,12 +159,13 @@ def search_filename():
     for row in tree.get_children():
         tree.delete(row)
 
-    # Insert new results into the treeview
+    # Insert new results into the Treeview
     for row in results:
         id_value = row[0]
         property_name = row[1]
         non_none_values = [value for value in row[2:] if value is not None]
-
+        value_str = ", ".join(map(str, non_none_values))
+        tree.insert("", "end", values=(id_value, property_name, value_str))
 
 # Create a button to execute the filename search
 search_button = ttk.Button(filename_frame, text="Search", command=search_filename)

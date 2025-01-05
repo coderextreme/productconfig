@@ -73,7 +73,7 @@ def grabMetadata(data, parent):
                 if d == "Material":
                     try:
                         diffuseColor = data[d]['@diffuseColor']
-                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'color', setid))
+                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'diffuseColor', setid))
                         for (c, component) in enumerate(diffuseColor):
                             if c == 0:
                                 result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (setid, 'red', component))
