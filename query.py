@@ -10,7 +10,7 @@ def add_filters():
     # Create a dictionary to store the state of each checkbox for each property name
     checkbox_vars = {prop: [] for prop in property_names}
 
-    # Create checkboxes for each property name and its top 10 unique values
+    # Create checkboxes for each property name and its top 20 unique values
     for prop in property_names:
         # Create a frame for each property group
         prop_frame = ttk.LabelFrame(checkbox_inner_frame, text=prop)
@@ -18,12 +18,12 @@ def add_filters():
 
         # Query and create checkboxes for unique values
         cursor.execute(f"""
-            SELECT INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE
+            SELECT RELATED_ID, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE
             FROM Objects
             WHERE PROPERTY_NAME = ?
-            GROUP BY INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE
+            GROUP BY RELATED_ID, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE
             ORDER BY COUNT(*) DESC
-            LIMIT 10
+            LIMIT 20
         """, (prop,))
 
         values = cursor.fetchall()
@@ -58,10 +58,10 @@ def add_filters():
             tree.insert("", "end", values=("No properties selected.", "", ""))
             return
 
-        query = f"SELECT ID, PROPERTY_NAME, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE FROM Objects WHERE {' OR '.join([f'(PROPERTY_NAME = ? AND (INTEGER_VALUE = ? OR TEXT_VALUE = ? OR BOOLEAN_VALUE = ? OR BLOB_VALUE = ? OR REAL_VALUE = ? OR NUMERIC_VALUE = ?))' for _ in selected_values])}"
+        query = f"SELECT ID, PROPERTY_NAME, RELATED_ID, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE FROM Objects WHERE {' OR '.join([f'(PROPERTY_NAME = ? AND (RELATED_ID = ? OR INTEGER_VALUE = ? OR TEXT_VALUE = ? OR BOOLEAN_VALUE = ? OR BLOB_VALUE = ? OR REAL_VALUE = ? OR NUMERIC_VALUE = ?))' for _ in selected_values])}"
         params = []
         for prop, val in selected_values:
-            params.extend([prop, val, val, val, val, val, val])
+            params.extend([prop, val, val, val, val, val, val, val])
         cursor.execute(query, tuple(params))
         results = cursor.fetchall()
 
@@ -148,7 +148,7 @@ def search_filename():
         return
 
     query = """
-    SELECT ID, PROPERTY_NAME, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE
+    SELECT ID, PROPERTY_NAME, RELATED_ID, INTEGER_VALUE, TEXT_VALUE, BOOLEAN_VALUE, BLOB_VALUE, REAL_VALUE, NUMERIC_VALUE
     FROM Objects
     WHERE TEXT_VALUE LIKE ? COLLATE NOCASE
     """

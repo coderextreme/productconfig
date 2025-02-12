@@ -9,6 +9,7 @@ connection.execute('DROP TABLE "Objects"')
 connection.execute('''CREATE TABLE "Objects" (
 	"ID"	INTEGER NOT NULL,
 	"PROPERTY_NAME"	TEXT NOT NULL,
+	"RELATED_ID"	INTEGER,
 	"INTEGER_VALUE"	INTEGER,
 	"TEXT_VALUE"	TEXT,
 	"BOOLEAN_VALUE"	TEXT,
@@ -73,7 +74,7 @@ def grabMetadata(data, parent):
                 if d == "Material":
                     try:
                         diffuseColor = data[d]['@diffuseColor']
-                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'diffuseColor', setid))
+                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'diffuseColor', setid))
                         for (c, component) in enumerate(diffuseColor):
                             if c == 0:
                                 result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (setid, 'red', component))
@@ -87,71 +88,71 @@ def grabMetadata(data, parent):
                         diffuseColor = None
                 elif d == "MetadataSet":
                     # print(f"{d} {name} {mvalue} {svalue}")
-                    result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'metadataset', setid))
+                    result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'metadataset', setid))
                     grabMetadata(data[d], setid)
                 elif d == "MetadataInteger":
                     # print(f"{d} {name} {mvalue} {svalue}")
                     if svalue is not None:
                         if isinstance(svalue, list):
-                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                             for (s, sv) in enumerate(svalue):
                                 result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (setid, s, sv))
                         else:
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, name, svalue))
                     elif mvalue is not None:
-                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                         for (m, mv) in enumerate(mvalue):
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (setid, m, mv))
                 elif d == "MetadataDouble":
                     # print(f"{d} {name} {mvalue} {svalue}")
                     if svalue is not None:
                         if isinstance(svalue, list):
-                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                             for (s, sv) in enumerate(svalue):
                                 result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, REAL_VALUE)  VALUES (?, ?, ?)", (setid, s, sv))
                         else:
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, REAL_VALUE)  VALUES (?, ?, ?)", (parent, name, svalue))
                     elif mvalue is not None:
-                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                         for (m, mv) in enumerate(mvalue):
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, REAL_VALUE)  VALUES (?, ?, ?)", (setid, m, mv))
                 elif d == "MetadataFloat":
                     # print(f"{d} {name} {mvalue} {svalue}")
                     if svalue is not None:
                         if isinstance(svalue, list):
-                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                             for (s, sv) in enumerate(svalue):
                                 result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, REAL_VALUE)  VALUES (?, ?, ?)", (setid, s, sv))
                         else:
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, REAL_VALUE)  VALUES (?, ?, ?)", (parent, name, svalue))
                     elif mvalue is not None:
-                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                         for (m, mv) in enumerate(mvalue):
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, REAL_VALUE)  VALUES (?, ?, ?)", (setid, m, mv))
                 elif d == "MetadataString":
                     # print(f"{d} {name} {mvalue} {svalue}")
                     if svalue is not None:
                         if isinstance(svalue, list):
-                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                             for (s, sv) in enumerate(svalue):
                                 result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, TEXT_VALUE)  VALUES (?, ?, ?)", (setid, s, sv))
                         else:
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, TEXT_VALUE)  VALUES (?, ?, ?)", (parent, name, svalue))
                     elif mvalue is not None:
-                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                         for (m, mv) in enumerate(mvalue):
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, TEXT_VALUE)  VALUES (?, ?, ?)", (setid, m, mv))
                 elif d == "MetadataBoolean":
                     # print(f"{d} {name} {mvalue} {svalue}")
                     if svalue is not None:
                         if isinstance(svalue, list):
-                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                            result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                             for (s, sv) in enumerate(svalue):
                                 result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, BOOLEAN_VALUE)  VALUES (?, ?, ?)", (setid, s, 'true' if sv else 'false'))
                         else:
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, BOOLEAN_VALUE)  VALUES (?, ?, ?)", (parent, name, 'true' if svalue else 'false'))
                     elif mvalue is not None:
-                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'array', setid))
+                        result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'array', setid))
                         for (m, mv) in enumerate(mvalue):
                             result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, BOOLEAN_VALUE)  VALUES (?, ?, ?)", (setid, m, 'true' if mv else 'false'))
             except KeyError:
@@ -172,7 +173,7 @@ for file_path in find_files("C:\\Users\\jcarl\\www.web3d.org\\x3d\\content\\exam
                     name = meta['@name']
                     content = meta['@content']
                     id = ID.genId()
-                    result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, INTEGER_VALUE)  VALUES (?, ?, ?)", (parent, 'meta', id))
+                    result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, RELATED_ID)  VALUES (?, ?, ?)", (parent, 'meta', id))
                     result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, TEXT_VALUE)  VALUES (?, ?, ?)", (id, 'name', name))
                     result = cursor.execute("INSERT INTO Objects (ID, PROPERTY_NAME, TEXT_VALUE)  VALUES (?, ?, ?)", (id, 'content', content))
             except KeyError:
