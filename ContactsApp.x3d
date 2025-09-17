@@ -1,0 +1,5141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
+  <head>
+    <component name='X_ITE' level='1'/>
+    <component name='CubeMapTexturing' level='2'/>
+    <meta name='title' content='hexagons.x3d'/>
+    <meta name='description' content='A hexagon'/>
+    <meta name='creator' content='John Carlson'/>
+    <meta name='created' content='12 December 2024'/>
+    <meta name='license' content='../license.html'/>
+  </head>
+  <Scene>
+    <Background
+        skyColor='1 1 1'/>
+    <NavigationInfo
+        type='"EXAMINE", "FLY", "WALK", "ANY"'/>
+    <EnvironmentLight>
+      <ImageCubeMapTexture containerField='diffuseTexture'
+          url='"https://create3000.github.io/Library/Tests/Components/images/helipad-diffuse.jpg"'>
+        <TextureProperties DEF='_1'
+            generateMipMaps='true'
+            minificationFilter='NICEST'
+            magnificationFilter='NICEST'/>
+      </ImageCubeMapTexture>
+      <ImageCubeMapTexture containerField='specularTexture'
+          url='"https://create3000.github.io/Library/Tests/Components/images/helipad-specular.jpg"'>
+        <TextureProperties USE='_1'/>
+      </ImageCubeMapTexture>
+    </EnvironmentLight>
+    <Viewpoint DEF='Front_View'
+        description='Front View'
+        position='0 1.5 25'/>
+    <Transform DEF='shapeContainer'
+        rotation='1 0 0 0.385'>
+      <Transform
+          translation='-5 -5 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/2CylinderEngine/glTF/2CylinderEngine.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9583561 0.5739917 0.5770644'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4544178 0.3817064 0.3944614'/>
+              <ImageTexture
+                  url='"images/2CylinderEngine.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 -5.353077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/2CylinderEngine/glTF-Draco/2CylinderEngine.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3672903 0.820726 0.6247875'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5990717 0.2881228 0.9328919'/>
+              <ImageTexture
+                  url='"images/2CylinderEngine.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 -4.846154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/2CylinderEngine/glTF-Embedded/2CylinderEngine.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.55668 0.7068379 0.7763187'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3397834 0.2332311 0.3272679'/>
+              <ImageTexture
+                  url='"images/2CylinderEngine.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 -5.199231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ABeautifulGame/glTF/ABeautifulGame.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8121591 0.6034682 0.6110348'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.748564 0.2654744 0.1553124'/>
+              <ImageTexture
+                  url='"images/ABeautifulGame.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 -4.692308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AlphaBlendModeTest/glTF/AlphaBlendModeTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4769393 0.4302867 0.6438863'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5529048 0.6389551 0.2388796'/>
+              <ImageTexture
+                  url='"images/AlphaBlendModeTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 -5.045385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AlphaBlendModeTest/glTF-Embedded/AlphaBlendModeTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4487233 0.39129 0.3144971'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2445821 0.2004657 0.8892207'/>
+              <ImageTexture
+                  url='"images/AlphaBlendModeTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 -4.538462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AnimatedCube/glTF/AnimatedCube.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5810044 0.5044082 0.5004947'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6902575 0.2833109 0.7740242'/>
+              <ImageTexture
+                  url='"images/AnimatedCube.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 -4.891538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AnimatedMorphCube/glTF/AnimatedMorphCube.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3767461 0.682545 0.9731754'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3706328 0.06289193 0.670092'/>
+              <ImageTexture
+                  url='"images/AnimatedMorphCube.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 -4.384615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AnimatedMorphCube/glTF-Quantized/AnimatedMorphCube.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.04140791 0.4600026 0.7676984'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9567226 0.2426289 0.2486876'/>
+              <ImageTexture
+                  url='"images/AnimatedMorphCube.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 -4.737692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AnimatedMorphSphere/glTF/AnimatedMorphSphere.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8452877 0.002919662 0.8338982'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6028073 0.7160264 0.9987733'/>
+              <ImageTexture
+                  url='"images/AnimatedMorphSphere.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 -4.230769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AnimatedTriangle/glTF/AnimatedTriangle.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7644307 0.9974971 0.1600063'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4784505 0.3098626 0.01499071'/>
+              <ImageTexture
+                  url='"images/AnimatedTriangle.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 -4.583846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AnimatedTriangle/glTF-Embedded/AnimatedTriangle.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1903133 0.01686766 0.8937'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.05985569 0.6609687 0.6671697'/>
+              <ImageTexture
+                  url='"images/AnimatedTriangle.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 -4.076923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AntiqueCamera/glTF/AntiqueCamera.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.05849803 0.7038097 0.01751384'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4696456 0.1030223 0.6025683'/>
+              <ImageTexture
+                  url='"images/AntiqueCamera.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 -4 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/AttenuationTest/glTF/AttenuationTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9160169 0.2844475 0.2063103'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.05287927 0.8251392 0.3547651'/>
+              <ImageTexture
+                  url='"images/AttenuationTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 -4.353077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Avocado/glTF/Avocado.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8631108 0.5125703 0.1654709'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.02953025 0.6259658 0.6585016'/>
+              <ImageTexture
+                  url='"images/Avocado.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 -3.846154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Avocado/glTF-Draco/Avocado.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4754321 0.4861301 0.2050704'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.423759 0.7259444 0.5814236'/>
+              <ImageTexture
+                  url='"images/Avocado.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 -4.199231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Avocado/glTF-Quantized/Avocado.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.437003 0.4496097 0.6599807'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4292838 0.8971942 0.4357264'/>
+              <ImageTexture
+                  url='"images/Avocado.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 -3.692308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BarramundiFish/glTF/BarramundiFish.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.07347877 0.9891787 0.9221905'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.06759143 0.734046 0.5522945'/>
+              <ImageTexture
+                  url='"images/BarramundiFish.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 -4.045385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BarramundiFish/glTF-Draco/BarramundiFish.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2997763 0.4588544 0.6041185'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.505399 0.9227245 0.07189935'/>
+              <ImageTexture
+                  url='"images/BarramundiFish.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 -3.538462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoomBox/glTF/BoomBox.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8566415 0.4637009 0.8264874'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1535279 0.6289536 0.9985182'/>
+              <ImageTexture
+                  url='"images/BoomBox.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 -3.891538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoomBox/glTF-Draco/BoomBox.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4556421 0.06497998 0.6046752'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9280223 0.7451166 0.7913442'/>
+              <ImageTexture
+                  url='"images/BoomBox.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 -3.384615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoomBoxWithAxes/glTF/BoomBoxWithAxes.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5984261 0.8105327 0.542959'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5019954 0.02769757 0.1843454'/>
+              <ImageTexture
+                  url='"images/BoomBoxWithAxes.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 -3.737692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Box/glTF/Box.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7735103 0.670089 0.4488421'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4720263 0.265278 0.1013646'/>
+              <ImageTexture
+                  url='"images/Box.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 -3.230769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Box/glTF-Draco/Box.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8955909 0.2089849 0.3567033'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8237154 0.942467 0.2106403'/>
+              <ImageTexture
+                  url='"images/Box.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 -3.583846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Box/glTF-Embedded/Box.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4316775 0.7851927 0.09714696'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7280853 0.4567767 0.3735096'/>
+              <ImageTexture
+                  url='"images/Box.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 -3.076923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Box With Spaces/glTF/Box With Spaces.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5623846 0.8138021 0.1200855'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9057753 0.7054555 0.9764596'/>
+              <ImageTexture
+                  url='"images/Box With Spaces.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 -3 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxAnimated/glTF/BoxAnimated.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5767115 0.08731919 0.9883085'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9016123 0.5868437 0.1406386'/>
+              <ImageTexture
+                  url='"images/BoxAnimated.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 -3.353077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxAnimated/glTF-Embedded/BoxAnimated.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6047698 0.2253285 0.1220337'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6498893 0.4420763 0.5779162'/>
+              <ImageTexture
+                  url='"images/BoxAnimated.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 -2.846154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxInterleaved/glTF/BoxInterleaved.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5853868 0.4649661 0.6096705'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3003019 0.7663953 0.5833974'/>
+              <ImageTexture
+                  url='"images/BoxInterleaved.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 -3.199231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxInterleaved/glTF-Embedded/BoxInterleaved.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6734117 0.4471497 0.0617219'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.001990853 0.3141529 0.147805'/>
+              <ImageTexture
+                  url='"images/BoxInterleaved.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 -2.692308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxTextured/glTF/BoxTextured.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7333178 0.9253448 0.495692'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.79133 0.6941153 0.181326'/>
+              <ImageTexture
+                  url='"images/BoxTextured.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 -3.045385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxTextured/glTF-Embedded/BoxTextured.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4169114 0.1397048 0.2097837'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8285228 0.1630469 0.7329283'/>
+              <ImageTexture
+                  url='"images/BoxTextured.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 -2.538462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxTexturedNonPowerOfTwo/glTF/BoxTexturedNonPowerOfTwo.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9221584 0.2196892 0.3937772'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7405993 0.9143082 0.3296332'/>
+              <ImageTexture
+                  url='"images/BoxTexturedNonPowerOfTwo.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 -2.891538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxTexturedNonPowerOfTwo/glTF-Embedded/BoxTexturedNonPowerOfTwo.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2150821 0.05845528 0.6349854'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2333906 0.514579 0.2291178'/>
+              <ImageTexture
+                  url='"images/BoxTexturedNonPowerOfTwo.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 -2.384615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxVertexColors/glTF/BoxVertexColors.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2825754 0.6111648 0.2654274'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.05737934 0.9157898 0.7282383'/>
+              <ImageTexture
+                  url='"images/BoxVertexColors.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 -2.737692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BoxVertexColors/glTF-Embedded/BoxVertexColors.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3712127 0.9534022 0.3457084'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3980735 0.1579239 0.8030517'/>
+              <ImageTexture
+                  url='"images/BoxVertexColors.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 -2.230769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BrainStem/glTF/BrainStem.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3713003 0.200173 0.9115244'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2727617 0.3485453 0.3305729'/>
+              <ImageTexture
+                  url='"images/BrainStem.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 -2.583846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BrainStem/glTF-Draco/BrainStem.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7298633 0.4217009 0.4006178'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4527215 0.8626429 0.05286355'/>
+              <ImageTexture
+                  url='"images/BrainStem.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 -2.076923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BrainStem/glTF-Embedded/BrainStem.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2519407 0.02263108 0.06956987'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4666821 0.788832 0.08725913'/>
+              <ImageTexture
+                  url='"images/BrainStem.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 -2 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/BrainStem/glTF-Meshopt/BrainStem.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2159438 0.8490032 0.1297601'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.115523 0.1557032 0.3320028'/>
+              <ImageTexture
+                  url='"images/BrainStem.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 -2.353077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Buggy/glTF/Buggy.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.01399963 0.8427587 0.1390797'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8521344 0.9549726 0.519296'/>
+              <ImageTexture
+                  url='"images/Buggy.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 -1.846154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Buggy/glTF-Draco/Buggy.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4639838 0.954065 0.1854602'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4620313 0.4919071 0.9350769'/>
+              <ImageTexture
+                  url='"images/Buggy.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 -2.199231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Buggy/glTF-Embedded/Buggy.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5523763 0.344353 0.34969'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.620241 0.08872459 0.8237265'/>
+              <ImageTexture
+                  url='"images/Buggy.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 -1.692308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Cameras/glTF/Cameras.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7862296 0.6321195 0.7081483'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6428275 0.07438409 0.9069964'/>
+              <ImageTexture
+                  url='"images/Cameras.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 -2.045385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Cameras/glTF-Embedded/Cameras.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.381803 0.8604498 0.4692191'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1529809 0.2973894 0.2210943'/>
+              <ImageTexture
+                  url='"images/Cameras.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 -1.538462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/CarbonFibre/glTF/CarbonFibre.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7671687 0.3762525 0.2021045'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.0744082 0.1635503 0.4138896'/>
+              <ImageTexture
+                  url='"images/CarbonFibre.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 -1.891538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/CesiumMan/glTF/CesiumMan.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6217255 0.6529655 0.1698735'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8426937 0.5458564 0.5882849'/>
+              <ImageTexture
+                  url='"images/CesiumMan.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 -1.384615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/CesiumMan/glTF-Draco/CesiumMan.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8889693 0.5698596 0.3982476'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.06144643 0.2896941 0.4405132'/>
+              <ImageTexture
+                  url='"images/CesiumMan.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 -1.737692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/CesiumMan/glTF-Embedded/CesiumMan.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7937946 0.9962956 0.05509689'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7854115 0.2684317 0.6412858'/>
+              <ImageTexture
+                  url='"images/CesiumMan.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 -1.230769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/CesiumMilkTruck/glTF/CesiumMilkTruck.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3308957 0.9319048 0.6900942'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1067287 0.3902701 0.3657687'/>
+              <ImageTexture
+                  url='"images/CesiumMilkTruck.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 -1.583846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/CesiumMilkTruck/glTF-Draco/CesiumMilkTruck.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9204725 0.7497002 0.5645276'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.05262603 0.2640509 0.09664528'/>
+              <ImageTexture
+                  url='"images/CesiumMilkTruck.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 -1.076923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/CesiumMilkTruck/glTF-Embedded/CesiumMilkTruck.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1880439 0.488899 0.4328247'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5959594 0.0337013 0.2872833'/>
+              <ImageTexture
+                  url='"images/CesiumMilkTruck.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 -1 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ClearCoatCarPaint/glTF/ClearCoatCarPaint.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1809036 0.1609441 0.2432755'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8611719 0.3440408 0.2888838'/>
+              <ImageTexture
+                  url='"images/ClearCoatCarPaint.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 -1.353077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ClearcoatRing/glTF/ClearcoatRing.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4260719 0.04570866 0.6892019'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6510177 0.784816 0.06124847'/>
+              <ImageTexture
+                  url='"images/ClearcoatRing.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 -0.8461538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ClearcoatSphere/glTF/ClearcoatSphere.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3144367 0.3250504 0.3325445'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5626302 0.5652725 0.9231778'/>
+              <ImageTexture
+                  url='"images/ClearcoatSphere.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 -1.199231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ClearCoatTest/glTF/ClearCoatTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.07572835 0.5068523 0.7419836'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.356795 0.6225854 0.3210802'/>
+              <ImageTexture
+                  url='"images/ClearCoatTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 -0.6923077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ClearcoatWicker/glTF/ClearcoatWicker.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8314631 0.1163891 0.5927898'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7133756 0.7435579 0.8654718'/>
+              <ImageTexture
+                  url='"images/ClearcoatWicker.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 -1.045385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Corset/glTF/Corset.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7867105 0.7028988 0.3596444'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9455098 0.5128957 0.9321217'/>
+              <ImageTexture
+                  url='"images/Corset.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 -0.5384615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Corset/glTF-Draco/Corset.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3585977 0.1411232 0.9873623'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3771445 0.4889769 0.6756008'/>
+              <ImageTexture
+                  url='"images/Corset.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 -0.8915385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Cube/glTF/Cube.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5352805 0.8953222 0.001628926'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.007664429 0.3206157 0.3626916'/>
+              <ImageTexture
+                  url='"images/Cube.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 -0.3846154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7480989 0.8144738 0.537242'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7102123 0.7831817 0.4232488'/>
+              <ImageTexture
+                  url='"images/DamagedHelmet.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 -0.7376923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/DamagedHelmet/glTF-Embedded/DamagedHelmet.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.09596094 0.6254533 0.3757038'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8470649 0.5542344 0.6394108'/>
+              <ImageTexture
+                  url='"images/DamagedHelmet.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 -0.2307692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/DirectionalLight/glTF/DirectionalLight.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2389352 0.9622589 0.1158925'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2664594 0.5300121 0.3471884'/>
+              <ImageTexture
+                  url='"images/DirectionalLight.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 -0.5838462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/DragonAttenuation/glTF/DragonAttenuation.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5577617 0.5644738 0.2154243'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4492795 0.6523349 0.06505507'/>
+              <ImageTexture
+                  url='"images/DragonAttenuation.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 -0.07692308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/DragonAttenuation/glTF-Meshopt/DragonAttenuation.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9277695 0.296853 0.8763731'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8603397 0.1787351 0.8273349'/>
+              <ImageTexture
+                  url='"images/DragonAttenuation.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 0 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Duck/glTF/Duck.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4175511 0.2184786 0.6746418'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7519725 0.0603457 0.3685393'/>
+              <ImageTexture
+                  url='"images/Duck.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 -0.3530769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Duck/glTF-Draco/Duck.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9684401 0.9204462 0.8550251'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9978401 0.5884275 0.6499897'/>
+              <ImageTexture
+                  url='"images/Duck.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 0.1538462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Duck/glTF-Embedded/Duck.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6196122 0.1001702 0.9421267'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3404694 0.6303704 0.2912137'/>
+              <ImageTexture
+                  url='"images/Duck.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 -0.1992308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Duck/glTF-Quantized/Duck.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3488447 0.9215429 0.5008666'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6349704 0.3040023 0.8159273'/>
+              <ImageTexture
+                  url='"images/Duck.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 0.3076923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/EmissiveStrengthTest/glTF/EmissiveStrengthTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7323862 0.2133977 0.1115292'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.675446 0.465294 0.7746117'/>
+              <ImageTexture
+                  url='"images/EmissiveStrengthTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 -0.04538462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/EnvironmentTest/glTF/EnvironmentTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5306599 0.9848921 0.7642685'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4254308 0.1352922 0.1846457'/>
+              <ImageTexture
+                  url='"images/EnvironmentTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 0.4615385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/EnvironmentTest/glTF-IBL/EnvironmentTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1450383 0.929555 0.3852963'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1322835 0.4534489 0.594446'/>
+              <ImageTexture
+                  url='"images/EnvironmentTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 0.1084615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/FlightHelmet/glTF/FlightHelmet.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9894257 0.5260627 0.7341623'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8019252 0.1317069 0.5085612'/>
+              <ImageTexture
+                  url='"images/FlightHelmet.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 0.6153846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/FlightHelmet/glTF-KTX-BasisU/FlightHelmet.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2879848 0.4772755 0.6255297'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6342576 0.910877 0.4428565'/>
+              <ImageTexture
+                  url='"images/FlightHelmet.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 0.2623077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Fox/glTF/Fox.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8033011 0.455834 0.09822941'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8112297 0.1800553 0.9630963'/>
+              <ImageTexture
+                  url='"images/Fox.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 0.7692308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/GearboxAssy/glTF/GearboxAssy.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6091483 0.6213231 0.7710006'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7587083 0.4830188 0.1949027'/>
+              <ImageTexture
+                  url='"images/GearboxAssy.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 0.4161538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/GearboxAssy/glTF-Draco/GearboxAssy.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1012837 0.8748498 0.7852696'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8335761 0.05522073 0.7656505'/>
+              <ImageTexture
+                  url='"images/GearboxAssy.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 0.9230769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/GearboxAssy/glTF-Embedded/GearboxAssy.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.01893053 0.6720409 0.8382965'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2282104 0.4922006 0.5320693'/>
+              <ImageTexture
+                  url='"images/GearboxAssy.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 1 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/GlamVelvetSofa/glTF/GlamVelvetSofa.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.03966498 0.8404943 0.9448028'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9530307 0.2251751 0.4266258'/>
+              <ImageTexture
+                  url='"images/GlamVelvetSofa.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 0.6469231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/InterpolationTest/glTF/InterpolationTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5484308 0.6162122 0.008931646'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2738128 0.755313 0.4019223'/>
+              <ImageTexture
+                  url='"images/InterpolationTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 1.153846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/IridescenceDielectricSpheres/glTF/IridescenceDielectricSpheres.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5248768 0.05557465 0.2439793'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9752716 0.2337705 0.05312393'/>
+              <ImageTexture
+                  url='"images/IridescenceDielectricSpheres.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 0.8007692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/IridescenceLamp/glTF/IridescenceLamp.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4346955 0.276237 0.8000337'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5169313 0.7406825 0.6982077'/>
+              <ImageTexture
+                  url='"images/IridescenceLamp.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 1.307692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/IridescenceMetallicSpheres/glTF/IridescenceMetallicSpheres.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2678111 0.2466743 0.04327291'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5673111 0.3988848 0.1732682'/>
+              <ImageTexture
+                  url='"images/IridescenceMetallicSpheres.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 0.9546154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/IridescenceSuzanne/glTF/IridescenceSuzanne.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.02508942 0.2128991 0.1005365'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7525977 0.06282673 0.8161435'/>
+              <ImageTexture
+                  url='"images/IridescenceSuzanne.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 1.461538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/IridescentDishWithOlives/glTF/IridescentDishWithOlives.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6088238 0.1677918 0.9114935'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9484844 0.04025663 0.7798137'/>
+              <ImageTexture
+                  url='"images/IridescentDishWithOlives.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 1.108462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Lantern/glTF/Lantern.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.07980612 0.1042816 0.2507481'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3858006 0.1676297 0.2975516'/>
+              <ImageTexture
+                  url='"images/Lantern.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 1.615385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Lantern/glTF-Draco/Lantern.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.607103 0.7613038 0.6431497'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.04026764 0.8809919 0.1100364'/>
+              <ImageTexture
+                  url='"images/Lantern.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 1.262308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Lantern/glTF-Quantized/Lantern.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9641879 0.3975046 0.250234'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7686595 0.1489696 0.10508'/>
+              <ImageTexture
+                  url='"images/Lantern.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 1.769231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/LightsPunctualLamp/glTF/LightsPunctualLamp.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6183016 0.7019446 0.2932585'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6776342 0.09301507 0.2831178'/>
+              <ImageTexture
+                  url='"images/LightsPunctualLamp.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 1.416154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MaterialsVariantsShoe/glTF/MaterialsVariantsShoe.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6991706 0.7763639 0.9336814'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.849085 0.04249349 0.2240451'/>
+              <ImageTexture
+                  url='"images/MaterialsVariantsShoe.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 1.923077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MeshPrimitiveModes/glTF/MeshPrimitiveModes.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6366606 0.8819063 0.6569224'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.07268028 0.8834507 0.7835094'/>
+              <ImageTexture
+                  url='"images/MeshPrimitiveModes.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 2 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MeshPrimitiveModes/glTF-Embedded/MeshPrimitiveModes.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1280648 0.9007328 0.5519867'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6360501 0.04671325 0.2526251'/>
+              <ImageTexture
+                  url='"images/MeshPrimitiveModes.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 1.646923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MetalRoughSpheres/glTF/MetalRoughSpheres.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2106557 0.3793219 0.5593883'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6242557 0.476172 0.3693815'/>
+              <ImageTexture
+                  url='"images/MetalRoughSpheres.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 2.153846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MetalRoughSpheres/glTF-Embedded/MetalRoughSpheres.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4801774 0.5369897 0.6550826'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3203632 0.287095 0.6419487'/>
+              <ImageTexture
+                  url='"images/MetalRoughSpheres.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 1.800769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MetalRoughSpheresNoTextures/glTF/MetalRoughSpheresNoTextures.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3555075 0.1256077 0.02545327'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9355466 0.2530764 0.1105982'/>
+              <ImageTexture
+                  url='"images/MetalRoughSpheresNoTextures.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 2.307692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MorphPrimitivesTest/glTF/MorphPrimitivesTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4498263 0.939808 0.5492952'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.41706 0.7145336 0.1606064'/>
+              <ImageTexture
+                  url='"images/MorphPrimitivesTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 1.954615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MorphPrimitivesTest/glTF-Draco/MorphPrimitivesTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8432874 0.8455762 0.05988741'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4086811 0.9428856 0.3323643'/>
+              <ImageTexture
+                  url='"images/MorphPrimitivesTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 2.461538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MorphStressTest/glTF/MorphStressTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9279677 0.6717255 0.07537047'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5482539 0.09251124 0.3015566'/>
+              <ImageTexture
+                  url='"images/MorphStressTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 2.108462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MosquitoInAmber/glTF/MosquitoInAmber.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8035072 0.3029076 0.9068888'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.07153079 0.5637483 0.4997443'/>
+              <ImageTexture
+                  url='"images/MosquitoInAmber.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 2.615385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MultipleScenes/glTF/MultipleScenes.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2293018 0.3261024 0.8792053'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3519249 0.5695466 0.9792637'/>
+              <ImageTexture
+                  url='"images/MultipleScenes.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 2.262308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MultipleScenes/glTF-Embedded/MultipleScenes.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6999526 0.4777718 0.1042191'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1314025 0.3916225 0.8559767'/>
+              <ImageTexture
+                  url='"images/MultipleScenes.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 2.769231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MultiUVTest/glTF/MultiUVTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4311571 0.9222216 0.4028096'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5750585 0.2763008 0.1771851'/>
+              <ImageTexture
+                  url='"images/MultiUVTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 2.416154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/MultiUVTest/glTF-Embedded/MultiUVTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.688452 0.5048921 0.4853737'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.761294 0.8087509 0.4393434'/>
+              <ImageTexture
+                  url='"images/MultiUVTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 2.923077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/NegativeScaleTest/glTF/NegativeScaleTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.804326 0.489629 0.4883286'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3818237 0.297823 0.9885608'/>
+              <ImageTexture
+                  url='"images/NegativeScaleTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 3 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/NormalTangentMirrorTest/glTF/NormalTangentMirrorTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.02348861 0.9266306 0.5521224'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5450709 0.2874998 0.06369958'/>
+              <ImageTexture
+                  url='"images/NormalTangentMirrorTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 2.646923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/NormalTangentMirrorTest/glTF-Embedded/NormalTangentMirrorTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2536827 0.1892952 0.5353687'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3849851 0.1278541 0.03287331'/>
+              <ImageTexture
+                  url='"images/NormalTangentMirrorTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 3.153846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/NormalTangentTest/glTF/NormalTangentTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4331087 0.2748119 0.5325257'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1184 0.4810551 0.7385534'/>
+              <ImageTexture
+                  url='"images/NormalTangentTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 2.800769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/NormalTangentTest/glTF-Embedded/NormalTangentTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2517014 0.8829417 0.1399098'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5463133 0.333787 0.2709575'/>
+              <ImageTexture
+                  url='"images/NormalTangentTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 3.307692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/OrientationTest/glTF/OrientationTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1323967 0.1360476 0.5838115'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4328397 0.8063169 0.547822'/>
+              <ImageTexture
+                  url='"images/OrientationTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 2.954615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/OrientationTest/glTF-Embedded/OrientationTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8112089 0.7425818 0.4437931'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.0612143 0.1889228 0.0369406'/>
+              <ImageTexture
+                  url='"images/OrientationTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 3.461538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/PrimitiveModeNormalsTest/glTF/PrimitiveModeNormalsTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6324945 0.1627875 0.3842175'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7924115 0.3724714 0.9720911'/>
+              <ImageTexture
+                  url='"images/PrimitiveModeNormalsTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 3.108462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ReciprocatingSaw/glTF/ReciprocatingSaw.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.07143375 0.04385673 0.2141739'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2692487 0.9791268 0.3797577'/>
+              <ImageTexture
+                  url='"images/ReciprocatingSaw.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 3.615385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ReciprocatingSaw/glTF-Draco/ReciprocatingSaw.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.05400247 0.2892766 0.3532968'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2536198 0.9996683 0.3919653'/>
+              <ImageTexture
+                  url='"images/ReciprocatingSaw.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 3.262308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ReciprocatingSaw/glTF-Embedded/ReciprocatingSaw.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8611126 0.7145668 0.1239358'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9919155 0.742281 0.4199145'/>
+              <ImageTexture
+                  url='"images/ReciprocatingSaw.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 3.769231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/RecursiveSkeletons/glTF/RecursiveSkeletons.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4807125 0.2009486 0.1637573'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.08027197 0.3891714 0.2656688'/>
+              <ImageTexture
+                  url='"images/RecursiveSkeletons.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 3.416154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/RiggedFigure/glTF/RiggedFigure.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9998079 0.905826 0.7053318'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1905269 0.9945329 0.74217'/>
+              <ImageTexture
+                  url='"images/RiggedFigure.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 3.923077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/RiggedFigure/glTF-Draco/RiggedFigure.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.680326 0.3858575 0.3076025'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3209266 0.4426355 0.7993284'/>
+              <ImageTexture
+                  url='"images/RiggedFigure.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 4 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/RiggedFigure/glTF-Embedded/RiggedFigure.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3047879 0.9782646 0.05689284'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2860292 0.5796664 0.265968'/>
+              <ImageTexture
+                  url='"images/RiggedFigure.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 3.646923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/RiggedSimple/glTF/RiggedSimple.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.03473292 0.05704263 0.0950817'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7423412 0.3779529 0.8043425'/>
+              <ImageTexture
+                  url='"images/RiggedSimple.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 4.153846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/RiggedSimple/glTF-Draco/RiggedSimple.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.819138 0.9254161 0.3145125'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1299172 0.4504137 0.4001024'/>
+              <ImageTexture
+                  url='"images/RiggedSimple.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 3.800769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/RiggedSimple/glTF-Embedded/RiggedSimple.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7399972 0.03718159 0.7317493'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2433059 0.8707896 0.1069782'/>
+              <ImageTexture
+                  url='"images/RiggedSimple.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 4.307692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SciFiHelmet/glTF/SciFiHelmet.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.01282987 0.8371734 0.6210814'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4544362 0.560605 0.9394547'/>
+              <ImageTexture
+                  url='"images/SciFiHelmet.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 3.954615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SheenChair/glTF/SheenChair.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2947513 0.7448781 0.3703063'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6094747 0.5833735 0.6776772'/>
+              <ImageTexture
+                  url='"images/SheenChair.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 4.461538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SheenCloth/glTF/SheenCloth.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.08555343 0.1385651 0.6714413'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3954952 0.2283363 0.6606221'/>
+              <ImageTexture
+                  url='"images/SheenCloth.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 4.108462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SheenDamask/glTF/SheenDamask.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4892824 0.4486286 0.1841465'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.001879616 0.9458227 0.8586171'/>
+              <ImageTexture
+                  url='"images/SheenDamask.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 4.615385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SheenHighHeel/glTF/SheenHighHeel.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7213239 0.369431 0.3897039'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1111987 0.5359085 0.03268845'/>
+              <ImageTexture
+                  url='"images/SheenHighHeel.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 4.262308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SimpleInstancing/glTF/SimpleInstancing.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.01596529 0.8130685 0.06479487'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4420642 0.6155889 0.03422784'/>
+              <ImageTexture
+                  url='"images/SimpleInstancing.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 4.769231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SimpleMeshes/glTF/SimpleMeshes.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8075114 0.2618728 0.5264031'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6906856 0.9823032 0.2938011'/>
+              <ImageTexture
+                  url='"images/SimpleMeshes.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 4.416154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SimpleMeshes/glTF-Embedded/SimpleMeshes.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8571642 0.8017045 0.2715675'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4579192 0.3288303 0.8793612'/>
+              <ImageTexture
+                  url='"images/SimpleMeshes.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 4.923077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SimpleMorph/glTF/SimpleMorph.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6941314 0.5884541 0.3292097'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2475858 0.9130526 0.4042247'/>
+              <ImageTexture
+                  url='"images/SimpleMorph.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 5 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SimpleMorph/glTF-Embedded/SimpleMorph.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4139205 0.8208582 0.2404432'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.435078 0.7683476 0.1481245'/>
+              <ImageTexture
+                  url='"images/SimpleMorph.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 4.646923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SimpleSkin/glTF/SimpleSkin.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5315211 0.0523562 0.102953'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1664472 0.3958277 0.06948273'/>
+              <ImageTexture
+                  url='"images/SimpleSkin.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 5.153846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SimpleSkin/glTF-Embedded/SimpleSkin.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.02058356 0.9185883 0.8241892'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4016182 0.04876968 0.8092496'/>
+              <ImageTexture
+                  url='"images/SimpleSkin.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 4.800769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SimpleSparseAccessor/glTF/SimpleSparseAccessor.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9600069 0.813236 0.7188509'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3066043 0.474318 0.2765825'/>
+              <ImageTexture
+                  url='"images/SimpleSparseAccessor.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 5.307692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SimpleSparseAccessor/glTF-Embedded/SimpleSparseAccessor.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9588018 0.4192121 0.4479754'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9802866 0.2078561 0.6093454'/>
+              <ImageTexture
+                  url='"images/SimpleSparseAccessor.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 4.954615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SpecGlossVsMetalRough/glTF/SpecGlossVsMetalRough.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2720278 0.3580549 0.9832951'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1769157 0.01112674 0.149024'/>
+              <ImageTexture
+                  url='"images/SpecGlossVsMetalRough.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 5.461538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SpecularTest/glTF/SpecularTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8175865 0.8001653 0.8356076'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3459618 0.5979889 0.9009718'/>
+              <ImageTexture
+                  url='"images/SpecularTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 5.108462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Sponza/glTF/Sponza.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7843527 0.7338567 0.8457481'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9742646 0.1797062 0.545237'/>
+              <ImageTexture
+                  url='"images/Sponza.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 5.615385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/StainedGlassLamp/glTF/StainedGlassLamp.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3818001 0.8372187 0.6773557'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.0197081 0.6116822 0.5565448'/>
+              <ImageTexture
+                  url='"images/StainedGlassLamp.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 5.262308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/StainedGlassLamp/glTF-JPG-PNG/StainedGlassLamp.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4582363 0.2119838 0.02711466'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3553448 0.8547056 0.5807269'/>
+              <ImageTexture
+                  url='"images/StainedGlassLamp.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 5.769231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/StainedGlassLamp/glTF-KTX-BasisU/StainedGlassLamp.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1168492 0.4123149 0.7688149'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4896959 0.1797786 0.02295808'/>
+              <ImageTexture
+                  url='"images/StainedGlassLamp.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 5.416154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Suzanne/glTF/Suzanne.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2045609 0.3616499 0.843088'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8223451 0.4195751 0.4559089'/>
+              <ImageTexture
+                  url='"images/Suzanne.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 5.923077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/SuzanneMorphSparse/glTF/SuzanneMorphSparse.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5967317 0.4063367 0.8211444'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.08539613 0.1673013 0.8105851'/>
+              <ImageTexture
+                  url='"images/SuzanneMorphSparse.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 6 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TextureCoordinateTest/glTF/TextureCoordinateTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2411225 0.9224628 0.1590557'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6097973 0.4656261 0.8669567'/>
+              <ImageTexture
+                  url='"images/TextureCoordinateTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 5.646923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TextureCoordinateTest/glTF-Embedded/TextureCoordinateTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2536328 0.2499567 0.09799688'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.925436 0.03897643 0.3332958'/>
+              <ImageTexture
+                  url='"images/TextureCoordinateTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 6.153846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TextureEncodingTest/glTF/TextureEncodingTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.025757 0.5703159 0.6471446'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6137267 0.8664551 0.04378704'/>
+              <ImageTexture
+                  url='"images/TextureEncodingTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 5.800769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TextureLinearInterpolationTest/glTF/TextureLinearInterpolationTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9698076 0.8457276 0.7604834'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.02600969 0.3830649 0.3826413'/>
+              <ImageTexture
+                  url='"images/TextureLinearInterpolationTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 6.307692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TextureSettingsTest/glTF/TextureSettingsTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5471822 0.6149089 0.6092621'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.06093467 0.3373619 0.3254789'/>
+              <ImageTexture
+                  url='"images/TextureSettingsTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 5.954615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TextureSettingsTest/glTF-Embedded/TextureSettingsTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2966494 0.119023 0.1246122'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4966162 0.08168369 0.5311266'/>
+              <ImageTexture
+                  url='"images/TextureSettingsTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 6.461538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TextureTransformMultiTest/glTF/TextureTransformMultiTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4413889 0.5685813 0.4379305'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.20921 0.7182581 0.9020688'/>
+              <ImageTexture
+                  url='"images/TextureTransformMultiTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 6.108462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TextureTransformTest/glTF/TextureTransformTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5173056 0.936984 0.8194598'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9820152 0.7958917 0.4138079'/>
+              <ImageTexture
+                  url='"images/TextureTransformTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 6.615385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/ToyCar/glTF/ToyCar.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7448838 0.02524946 0.9527886'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3195637 0.8086908 0.8612869'/>
+              <ImageTexture
+                  url='"images/ToyCar.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 6.262308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TransmissionRoughnessTest/glTF/TransmissionRoughnessTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6523573 0.3621535 0.1842851'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2241714 0.6141328 0.5540379'/>
+              <ImageTexture
+                  url='"images/TransmissionRoughnessTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 6.769231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TransmissionSuzanne/glTF/TransmissionSuzanne.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9188343 0.008116173 0.3581609'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.07426385 0.945673 0.9311493'/>
+              <ImageTexture
+                  url='"images/TransmissionSuzanne.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 6.416154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TransmissionTest/glTF/TransmissionTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1381311 0.2514007 0.1998871'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6711857 0.1110962 0.8969453'/>
+              <ImageTexture
+                  url='"images/TransmissionTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 6.923077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Triangle/glTF/Triangle.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6638673 0.1054997 0.7844872'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.5806618 0.9685877 0.2428937'/>
+              <ImageTexture
+                  url='"images/Triangle.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 7 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Triangle/glTF-Embedded/Triangle.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8672263 0.3789492 0.04328796'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1800694 0.2889807 0.9545934'/>
+              <ImageTexture
+                  url='"images/Triangle.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-4 6.646923 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TriangleWithoutIndices/glTF/TriangleWithoutIndices.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.78955 0.3922005 0.09550008'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1676282 0.9539666 0.9921855'/>
+              <ImageTexture
+                  url='"images/TriangleWithoutIndices.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-3 7.153846 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TriangleWithoutIndices/glTF-Embedded/TriangleWithoutIndices.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.9736383 0.8871596 0.874266'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4674124 0.2435417 0.9812145'/>
+              <ImageTexture
+                  url='"images/TriangleWithoutIndices.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-2 6.800769 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/TwoSidedPlane/glTF/TwoSidedPlane.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1854002 0.1064081 0.8082069'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.1690209 0.1429293 0.1560887'/>
+              <ImageTexture
+                  url='"images/TwoSidedPlane.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-1 7.307692 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/Unicode❤♻Test/glTF/Unicode❤♻Test.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2519329 0.4379917 0.06623293'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7585961 0.4749255 0.8487018'/>
+              <ImageTexture
+                  url='"images/Unicode❤♻Test.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='0 6.954615 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/UnlitTest/glTF/UnlitTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6529172 0.8348949 0.2013212'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.07161068 0.0983012 0.1589908'/>
+              <ImageTexture
+                  url='"images/UnlitTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='1 7.461538 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/VC/glTF/VC.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.444539 0.06033401 0.2903726'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8648344 0.552208 0.4473149'/>
+              <ImageTexture
+                  url='"images/VC.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='2 7.108462 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/VC/glTF-Draco/VC.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.03527116 0.630008 0.5651018'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2747562 0.1336377 0.9862034'/>
+              <ImageTexture
+                  url='"images/VC.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='3 7.615385 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/VC/glTF-Embedded/VC.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7938144 0.2933192 0.2679311'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8220666 0.8021166 0.6394822'/>
+              <ImageTexture
+                  url='"images/VC.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='4 7.262308 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/VertexColorTest/glTF/VertexColorTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4010328 0.0304533 0.5712167'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.4622697 0.6649201 0.1160015'/>
+              <ImageTexture
+                  url='"images/VertexColorTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='5 7.769231 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/VertexColorTest/glTF-Embedded/VertexColorTest.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.02218326 0.1846725 0.2267981'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6844933 0.197957 0.1051613'/>
+              <ImageTexture
+                  url='"images/VertexColorTest.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='6 7.416154 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/WaterBottle/glTF/WaterBottle.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.6260918 0.5199893 0.9825841'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.3268292 0.2407274 0.778547'/>
+              <ImageTexture
+                  url='"images/WaterBottle.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='7 7.923077 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/WaterBottle/glTF-Draco/WaterBottle.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.7706015 0.3891911 0.2141829'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.2612862 0.868849 0.7869397'/>
+              <ImageTexture
+                  url='"images/WaterBottle.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+      <Transform
+          translation='-5 8 0'
+          scale='0.28 0.28 0.28'>
+        <Anchor
+            url='"C:/Users/jcarl/glTF-Sample-Models/2.0/XmpMetadataRoundedCube/glTF/xmp.gltf"'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.8997022 0.244937 0.1155832'/>
+            </Appearance>
+            <IndexedFaceSet
+                solid='false'
+                creaseAngle='3.14'
+                coordIndex='0, 1, 2, 3, 4, 5, -1'>
+              <Coordinate
+                  point='-2 0 -0.01, -1 1.732 -0.01, 1 1.732 -0.01, 2 0 -0.01, 1 -1.732 -0.01, -1 -1.732 -0.01'/>
+            </IndexedFaceSet>
+          </Shape>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0.01700487 0.1433763 0.1900373'/>
+              <ImageTexture
+                  url='"images/xmp.png"'/>
+            </Appearance>
+            <Rectangle2D
+                size='2.5 2.5'/>
+          </Shape>
+        </Anchor>
+      </Transform>
+    </Transform>
+    <Script>
+<![CDATA[hexagons.js]]>
+    </Script>
+  </Scene>
+</X3D>

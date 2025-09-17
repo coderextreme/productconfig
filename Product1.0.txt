@@ -1,0 +1,37 @@
+I’m interested in building a system that focuses on Data/Information/Knowledge/Model/Product/Social/Marketing/Systems Science.
+
+Where one takes the ideas of
+
+3D Skeleton/Model/Graph with time series animation (deafblind project)
+Forms
+Read SQL DDL to create Relationship+Entity tables
+3D world with time series animation
+Employee/Employer/Interviews/Resumes/Cover Letters
+Contacts/Dating/Meetings/Virtual Space Leasing 
+Product Filtering/Product Selection/Product Configuration/Shopping/Inventory 
+API/Language Selection
+File Browsing/Windowing/HTML/DOM
+Mind maps/Semantic Networks/Knowledge Networks
+3D asset management 
+IT Modeling 
+Circuit Layout/IMPACT
+Space Leasing/Mortgages/Loans/Hotel Rioms
+etc,
+
+and combines them all into something configurable to craft one of them, possibly data driven.  Compilation from abstract to concrete artifacts should be possible.
+
+I don’t want to end up with something like Protege, OWL or RDF;  something higher level than React,CSS and HTML is desired.  A 3D-4D interface is highly desirable 
+
+Perhaps a 6th generation language or graphical builder would work best, but at some point, the system should be save-able to and load-able from UTF-8, if only for transferring between databases.  Ideally, everything could be compiled to C++ and distributed as a native app, or in a distributed 3-tier form.  On the wire, it should start with Turing incomplete C++, but C++ is negotiable.  Ideally, people could use their own notation, and the notation would be pluggable into the system.
+
+If you are like-minded, please contact me.  I have quite a bit of this in bits and pieces.  I’m trying to bring everything together so I don’t maintain as much.
+
+I realize this is in the Lotus Notes/Shopify/Salesforce/Amazon/Product Lifecycle Management market.  I am most familiar with PLM.
+
+If you know of a standard for this kind of thing, let me know.
+
+I call this “Product 1.0,” probably allied with Product-Driven Modeling.
+
+I am trying to lift the industry beyond UI libraries and frameworks we’ve been stuck in for ages.   The focus should be on selecting and delivering products, not page design and layout.
+
+I have many apps which explore these areas.

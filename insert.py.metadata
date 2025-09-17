@@ -1,0 +1,246 @@
+import sqlite3
+import os
+import json
+
+connection = sqlite3.connect("EntityRelationship.sqlite3")
+
+connection.execute('PRAGMA foreign_keys = ON')
+connection.execute('DROP TABLE "Relationship"')
+connection.execute('DROP TABLE "Entity"')
+
+connection.execute('''CREATE TABLE "Relationship" (
+	"ID"	INTEGER NOT NULL,
+	"PROPERTY_ID"	INTEGER NOT NULL,
+	"RELATED_ID"	INTEGER,
+    FOREIGN KEY ("PROPERTY_ID") REFERENCES "Entity" ("ID"),
+    FOREIGN KEY ("RELATED_ID") REFERENCES "Entity" ("ID")
+)''')
+
+connection.execute('''CREATE TABLE "Entity" (
+	"ID"	INTEGER PRIMARY KEY,
+	"INTEGER_VALUE"	INTEGER,
+	"TEXT_VALUE"	TEXT,
+	"BOOLEAN_VALUE"	TEXT,
+	"BLOB_VALUE"	BLOB,
+	"REAL_VALUE"	REAL,
+	"NUMERIC_VALUE"	NUMERIC
+)''')
+
+cursor = connection.cursor()
+
+def find_files(directory, extension):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file.endswith(extension):
+                yield os.path.join(root, file)
+
+class IdGen():
+    def __init__(self):
+        self.id = 0
+
+    def genId(self):
+        self.id += 1
+        return self.id
+
+ID = IdGen()
+
+def dumpRelationship(id):
+    print(f"Relationship {id}")
+    cursor.execute("SELECT * FROM Relationship WHERE ID = ?", id)
+    for record in cursor.fetchall():
+        r = []
+        for field in record:
+            if field is not None:
+                r.append(field)
+        print(f"{r}")
+
+def dumpEntity(id):
+    print(f"Entity {id}")
+    cursor.execute("SELECT * FROM Entity WHERE ID = ?", id)
+    for record in cursor.fetchall():
+        r = []
+        for field in record:
+            if field is not None:
+                r.append(field)
+        print(f"{r}")
+
+def select(entity_type, entity_value):
+    if not entity_type in ("INTEGER_VALUE", "TEXT_VALUE", "BOOLEAN_VALUE", "BLOB_VALUE", "REAL_VALUE", "NUMERIC_VALUE"):
+        raise "Illegal entity type "+entity_type
+    cursor.execute("SELECT DISTINCT ID FROM Entity WHERE "+entity_type+" = ?", (entity_value,))
+    for record in cursor.fetchall():
+        print(record)
+        return record[0]
+    return None
+
+def insert(parent, property_type, property_value, value_type, value):
+    # TODO validation
+    if not property_type in ("INTEGER_VALUE", "TEXT_VALUE", "BOOLEAN_VALUE", "BLOB_VALUE", "REAL_VALUE", "NUMERIC_VALUE"):
+        raise "Illegal property type "+property_type
+
+    if not value_type in ("INTEGER_VALUE", "TEXT_VALUE", "BOOLEAN_VALUE", "BLOB_VALUE", "REAL_VALUE", "NUMERIC_VALUE"):
+        raise KeyError("Illegal value type "+value_type)
+
+    property_id = select(property_type, property_value)
+    if property_id is None:
+        property_id = ID.genId()
+        cursor.execute("INSERT INTO Entity (ID, "+property_type+")  VALUES (?, ?)", (property_id, property_value))
+    value_id = select(value_type, value)
+    if value_id is None:
+        value_id = ID.genId()
+        cursor.execute("INSERT INTO Entity (ID, "+value_type+")  VALUES (?, ?)", (value_id, value))
+    try:
+        # print(f"{parent} {property_id} {value_id}")
+        cursor.execute("INSERT INTO Relationship (ID, PROPERTY_ID, RELATED_ID)  VALUES (?, ?, ?)", (parent, property_id, value_id))
+    except:
+        dumpEntity(property_id)
+        dumpEntity(value_id)
+        dumpRelationship(parent)
+
+def insertMetadata(metadata_type, name, svalue, mvalue, parent, setid):
+    # print(f"{metadata_type} {name} {mvalue} {svalue}")
+    if svalue is not None:
+        if isinstance(svalue, list):
+            insert(parent, 'TEXT_VALUE', 'array', 'INTEGER_VALUE', setid)
+            for (s, sv) in enumerate(svalue):
+                insert(setid, 'INTEGER_VALUE', s, metadata_type, sv)
+        else:
+            insert(parent, 'INTEGER_VALUE', name, metadata_type, svalue)
+    elif mvalue is not None:
+        insert(parent, 'TEXT_VALUE', 'array', 'INTEGER_VALUE', setid)
+        for (m, mv) in enumerate(mvalue):
+            insert(setid, 'INTEGER_VALUE', m, metadata_type, mv)
+
+def insertBooleanMetadata(metadata_type, name, svalue, mvalue, parent, setid):
+    # print(f"{netadata_type} {name} {mvalue} {svalue}")
+    if svalue is not None:
+        if isinstance(svalue, list):
+            insert(parent, 'TEXT_VALUE', 'array', 'INTEGER_VALUE', setid)
+            for (s, sv) in enumerate(svalue):
+                insert(setid, 'INTEGER_VALUE', s, metadata_type, 'true' if sv else 'false')
+        else:
+            insert(parent, 'INTEGER_VALUE', name, metadata_type, 'true' if svalue else 'false')
+    elif mvalue is not None:
+        insert(parent, 'TEXT_VALUE', 'array', 'INTEGER_VALUE', setid)
+        for (m, mv) in enumerate(mvalue):
+            insert(setid, 'INTEGER_VALUE', m, metadata_type, 'true' if mv else 'false')
+
+def grabMetadata(data, parent):
+
+    if isinstance(data, (tuple, list)):
+        for d in data:
+            # print(f"{d}\n\n")
+            grabMetadata(d, parent)
+    elif isinstance(data, str):
+        #print(f"{data}\n\n")
+        pass
+    elif isinstance(data, int):
+        #print(f"{data}\n\n")
+        pass
+    elif isinstance(data, float):
+        #print(f"{data}\n\n")
+        pass
+    elif isinstance(data, object):
+        for d in data:
+            try:
+                if d.startswith("Metadata"):
+                    name = data[d]['@name']
+                    try:
+                        mvalue = data[d]['-value']
+                    except KeyError:
+                        mvalue = None
+                    try:
+                        svalue = data[d]['@value']
+                    except KeyError:
+                        svalue = None
+                    setid = ID.genId()
+                    insert(parent, 'TEXT_VALUE', 'name', 'TEXT_VALUE', name)
+                elif d == "Material":
+                    setid = ID.genId()
+                else:
+                    setId = ID.genId()
+                    grabMetadata(data[d], setId)
+                if d == "Material":
+                    try:
+                        diffuseColor = data[d]['@diffuseColor']
+                        insert(parent, 'TEXT_VALUE', 'diffuseColor', 'INTEGER_VALUE', setid)
+                        for (c, component) in enumerate(diffuseColor):
+                            if c == 0:
+                                insert(setid, 'TEXT_VALUE', 'red', 'INTEGER_VALUE', component)
+                            elif c == 1:
+                                insert(setid, 'TEXT_VALUE', 'green', 'INTEGER_VALUE', component)
+                            elif c == 2:
+                                insert(setid, 'TEXT_VALUE', 'blue', 'INTEGER_VALUE', component)
+                            elif c == 3:
+                                insert(setid, 'TEXT_VALUE', 'alpha', 'INTEGER_VALUE', component)
+                    except KeyError:
+                        diffuseColor = None
+                elif d == "MetadataSet":
+                    # print(f"{d} {name} {mvalue} {svalue}")
+                    insert(parent, 'TEXT_VALUE', 'metadataset', 'INTEGER_VALUE', setid)
+                    grabMetadata(data[d], setid)
+                elif d == "MetadataInteger":
+                    insertMetadata('INTEGER_VALUE', name, svalue, mvalue, parent, setid)
+                elif d == "MetadataDouble":
+                    insertMetadata('REAL_VALUE', name, svalue, mvalue, parent, setid)
+                elif d == "MetadataFloat":
+                    insertMetadata('REAL_VALUE', name, svalue, mvalue, parent, setid)
+                elif d == "MetadataString":
+                    insertMetadata('TEXT_VALUE', name, svalue, mvalue, parent, setid)
+                elif d == "MetadataBoolean":
+                    insertBooleanMetadata('BOOLEAN_VALUE', name, svalue, mvalue, parent, setid)
+            except KeyError:
+                nextId = ID.genId()
+                grabMetadata(data[d], nextId)
+    else:
+        print(f"DATA {data}\n\n")
+
+def lookupValueType(obj):
+    try:
+        types = {
+                int:'INTEGER_VALUE',
+                str: 'TEXT_VALUE',
+                float: 'REAL_VALUE',
+                bool: 'BOOLEAN_VALUE',
+                dict: 'OBJECT_VALUE',
+                list: 'ARRAY_VALUE'
+        }
+        return types[type(obj)]
+    except KeyError:
+        print("type error", type(obj))
+        return None
+
+def loadJsonObject(data, objectid):
+    if type(data) == dict:
+        for prop in data:
+            if type(prop) in (int, str, float, bool):
+                property_type = lookupValueType(prop)
+                value_type = lookupValueType(data[prop])
+                if value_type not in ('ARRAY_VALUE', 'OBJECT_VALUE'):
+                    insert(objectid, property_type, prop, value_type, data[prop])
+                loadJsonObject(data[prop], ID.genId())
+            elif type(prop) in (dict, list):
+                loadJsonObject(prop, ID.genId())
+    elif type(data) == list:
+        for prop, item in enumerate(data):
+            if type(item) in (int, str, float, bool):
+                property_type = lookupValueType(prop)
+                value_type = lookupValueType(item)
+                
+                if value_type not in ('ARRAY_VALUE', 'OBJECT_VALUE'):
+                    insert(objectid, property_type, prop, value_type, item)
+            loadJsonObject(item, ID.genId())
+
+for file_path in find_files("C:\\Users\\jcarl\\X3DJSONLD\\src\\main\\personal\\", "ball.json"):
+    objectid = ID.genId()
+    cursor.execute("INSERT INTO Entity (ID, INTEGER_VALUE)  VALUES (?, ?)", (objectid, objectid))
+    insert(objectid, 'TEXT_VALUE', 'filename', 'TEXT_VALUE', file_path)
+    with open(file_path, 'r') as f:
+        try:
+            data = json.load(f)
+            loadJsonObject(data, objectid)
+        except json.decoder.JSONDecodeError:
+            print("JSON decoding error")
+
+connection.commit()
+connection.close()

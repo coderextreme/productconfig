@@ -1,10 +1,8 @@
 {
-  "type": "module",
   "dependencies": {
-    "x3d-image": "^1.0.95",
-    "express": "*"
-  },
-  "devDependencies": {
-    "eslint": "*"
+    "cors": "*",
+    "express": "*",
+    "sqlite3": "*",
+    "x3d-image": "*"
   }
 }
