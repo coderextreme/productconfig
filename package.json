@@ -3,6 +3,7 @@
     "cors": "*",
     "express": "*",
     "sqlite3": "*",
-    "x3d-image": "*"
+    "x3d-image": "*",
+    "debug": "4.4.1"
   }
 }
