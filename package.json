@@ -1,9 +1,10 @@
 {
+   "type": "module",
   "dependencies": {
     "cors": "*",
     "express": "*",
     "sqlite3": "*",
     "x3d-image": "*",
-    "debug": "4.4.1"
+    "debug": "4.4.3"
   }
 }

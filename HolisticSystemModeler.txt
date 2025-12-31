@@ -1,0 +1,94 @@
+Design Document: Holistic System Modeler (HSM)
+1. Project Overview
+Title: Holistic System Modeler (HSM)
+Concept: A conceptual demonstrator for a 3D/4D integrated development environment (IDE) designed to model, visualize, and configure complex systems across various domains.
+Mission: The primary goal is to create a proof-of-concept that showcases how interconnected data can be represented as a dynamic, interactive 3D force-directed graph. The application bridges concepts from data science, 3D modeling, and system architecture, providing users with an intuitive and insightful way to explore complex relationships within a system as it evolves over time (the 4th dimension).
+2. Core Concepts
+Holistic Visualization: Users can view a system from multiple perspectives, or "domains." Each domain represents the same underlying reality but emphasizes different components and relationships (e.g., a software architecture view vs. a human resources view).
+Dynamic 3D Graph: The core of the application is an interactive 3D space where system components (nodes) and their relationships (links) are visualized. A force-directed layout algorithm runs continuously, causing nodes to gently push and pull on each other to find an optimal, readable arrangement.
+The Fourth Dimension (Time): The system is not static. Components are introduced at different points in time. A timeline control allows the user to scrub through the system's lifecycle, dynamically adding or removing nodes and links to reflect the state of the system at that specific moment.
+3. Key Features & Functionality
+3.1. Main Interface
+Header: A static header displays the application's title and a brief description.
+Domain Selection Panel (Left): A persistent sidebar allows users to switch between different predefined system domains.
+Interactive 3D Scene (Center): The main content area is a 3D canvas for the graph visualization. Users can navigate the scene using standard orbit controls (rotate, pan, and zoom).
+Contextual Information Panel (Right): A panel slides into view upon node selection, displaying detailed information about that node. It slides out when the node is deselected.
+Timeline Control (Footer): A footer component features a slider that controls the current "time" of the system, from 0 to 100.
+3.2. Graph Interaction & Visualization
+Selection:
+Clicking a node selects it.
+The selected node and its immediate neighbors are brought into focus with full opacity and an emissive highlight.
+All other nodes and links in the graph fade into the background (low opacity) to reduce visual clutter.
+The Info Panel updates to show the selected node's data.
+Hovering:
+Hovering the cursor over a node provides a subtle emissive glow.
+A text label showing the node's name appears above the node on both hover and selection.
+Deselection: Clicking on the background of the 3D scene deselects any currently selected node, returning the graph to its default, fully visible state.
+Links: Links are rendered as thin lines with animated particles flowing along their path to indicate directionality and activity. The color of links changes to highlight connections to a selected node.
+3.3. Timeline Logic
+The timeline slider controls a global currentTime state variable.
+Only nodes with a startTime property less than or equal to currentTime are rendered in the graph.
+Links are only rendered if both their source and target nodes are currently visible.
+Changing the time dynamically filters the dataset, causing the graph to update smoothly.
+4. UI/UX Design
+Theme: A modern, "sci-fi" dark theme. The palette is dominated by dark grays (#111827) and blacks, with a vibrant accent color (cyan) for interactive elements, highlights, and typography.
+Layout: A fixed, full-screen layout composed of:
+Header: Fixed at the top.
+Main Content Area: A 3-column flexible layout (Control Panel, Scene, Info Panel).
+Footer: Fixed at the bottom.
+Visual Style:
+Uses blurred, semi-transparent backgrounds (backdrop-blur-sm) for the sidebars, header, and footer to create a sense of depth against the 3D scene.
+Utilizes a clean, consistent set of custom SVG icons for domain selection.
+Graph Aesthetics:
+Nodes: Rendered as 3D spheres. A node's size is proportional to its val data property. Its color is determined by its type, mapped to a predefined color palette for visual distinction.
+Labels: Text labels are rendered as sprites with a semi-transparent dark background to ensure readability against the complex graph and other nodes.
+5. Data Structure & Domains
+5.1. Data Schema
+The application is driven by a structured data format defined in types.ts.
+NodeObject:
+id: string (Unique identifier)
+name: string (Display name)
+type: string (Used for coloring and categorization)
+description: string (Detailed text for the Info Panel)
+val: number (Determines the node's size)
+startTime: number (The time at which the node appears, from 0-100)
+LinkObject:
+source: string | NodeObject (The ID of the source node)
+target: string | NodeObject (The ID of the target node)
+Domain:
+id: string (Unique identifier for the domain)
+name: string (Display name)
+icon: React Functional Component for the icon
+data: { nodes: NodeObject[], links: LinkObject[] }
+5.2. Specified Domains
+The application includes the following 13 distinct domains, each with a unique dataset.
+Domain Name	Icon	Description
+Software Engineering	CodeIcon	Models the architecture of a software application.
+Human Resources	UserGroupIcon	Visualizes the organizational and recruitment structure of a company.
+Product Lifecycle	CubeIcon	Represents the process of designing, developing, and releasing a product.
+3D Asset Management	ShapesIcon	Shows the components and relationships in a 3D model asset pipeline.
+Knowledge Representation	HierarchyIcon	A semantic network modeling concepts like mind maps and knowledge graphs.
+Database Modeling	DatabaseIcon	Visualizes a database schema created from a SQL DDL script.
+E-Commerce & Inventory	CartIcon	Models the user journey and backend systems for online shopping.
+Hardware & Circuit Design	ChipIcon	Represents the architecture of an FPGA and its components.
+Language & Grammar	BracketsIcon	Models the components of a formal grammar, such as production rules and symbols.
+Operating System Concepts	FolderIcon	Visualizes high-level components of an operating system.
+Real Estate & Hospitality	BuildingIcon	Represents the relationships between properties, financing, and services.
+Accessible IDE	AccessibilityIcon	Models a conceptual IDE designed for Deaf-blind users.
+Form & Cell Architecture	GridIcon	Visualizes a system of reusable components (cells) within forms.
+6. Technical Implementation
+Frontend Framework: React 19
+3D Rendering Engine: Three.js
+React-Three Integration: The scene is managed using @react-three/fiber, which provides a declarative, component-based syntax for Three.js. @react-three/drei is used for helpers like camera controls (OrbitControls) and text rendering.
+Graph Physics & Rendering: The three-forcegraph library is used to manage the graph data, run the force-directed physics simulation (tickFrame), and render the nodes and links as Three.js objects.
+State Management: Global UI state (selected domain, selected node, current time) is managed within the root App component using React's useState and useCallback hooks. State is passed down to child components via props.
+Interaction Model: User interaction (clicking and hovering) is handled via a manual raycasting implementation within the ForceGraph component. This was chosen for stability over the library's built-in event handlers. A THREE.Raycaster is used to detect intersections between the mouse cursor and node meshes on every pointer move and click event.
+Component Architecture:
+App: The root component, manages state and composes the main layout.
+ControlPanel: Renders the list of selectable domains.
+InfoPanel: Displays details for the selectedNode.
+Timeline: Provides the slider to control currentTime.
+Scene: Sets up the R3F Canvas and 3D lighting.
+ForceGraph: The core component that initializes, configures, and updates the three-forcegraph instance. It also handles all visual updates and interaction logic.
+Styling: Tailwind CSS is used for all styling, loaded via the CDN for rapid development. The class-based utility approach is used throughout all components.
+Module System: The project uses native ES Modules, with dependencies managed via an importmap in index.html.

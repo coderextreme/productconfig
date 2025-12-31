@@ -1,0 +1,104 @@
+Project Design Document: Unified Systems Explorer
+1. High-Level Vision & Summary
+Project Title: Unified Systems Explorer
+Summary: The Unified Systems Explorer is an advanced, data-driven web application designed for knowledge management, system architecture, and conceptual exploration. It provides an interactive, hierarchical interface for users to build, visualize, and analyze complex systems and domains. The application uniquely combines a traditional tree-based navigation system with a spatial, diagrammatic canvas and leverages the power of the Google Gemini API to automatically generate rich, detailed content for individual concepts, transforming simple nodes into in-depth analytical documents.
+Core Goal: To create a dynamic and intelligent environment where users can map out complex ideas, see their interconnections, and flesh out details with AI-assisted insights, bridging the gap between high-level conceptualization and detailed understanding.
+2. Key Features & Functionality
+Hierarchical Knowledge Base: Users can create a tree-like structure of nodes to represent domains, systems, concepts, models, and tools.
+Full CRUD Operations: Support for creating, renaming (updating), and deleting nodes at any level of the hierarchy.
+Dual-View Interface:
+Sidebar Explorer: A collapsible, familiar file-tree view for quick navigation and structural manipulation.
+Main Content View: A dynamic area that adapts to the selected node.
+Adaptive Content Views:
+Diagram View: When a node with children ("folder") is selected, the main view becomes an interactive 2D canvas. Child nodes are displayed as movable cards connected to the parent, allowing for spatial organization.
+Detail View: When a leaf node ("file") is selected, the application calls the Gemini API to generate a detailed, structured analysis of the concept.
+Interactive Diagramming:
+Drag-and-Drop: Users can freely position nodes on the canvas to visually represent relationships or importance.
+Grid Snapping: Node movement is snapped to a grid for clean alignment.
+Auto-Layout: New nodes added to the diagram are automatically arranged in a circular pattern for initial placement.
+Visual Connectors: Lines are drawn from the parent context to each child node to visualize the hierarchy.
+AI-Powered Content Generation:
+Utilizes the gemini-2.5-pro model to provide expert-level analysis on demand.
+A sophisticated prompt instructs the AI to act as a systems architect, providing a structured breakdown including definitions, principles, data models, implementation strategies, and system synergies.
+Responsive Design: The interface is optimized for both desktop and mobile use, with a toggleable sidebar for smaller screens.
+In-line Editing: Users can easily rename nodes directly in both the sidebar tree and the diagram view.
+3. User Experience & Design
+3.1. Visual Design & Theme
+Aesthetic: A modern, "tech-noir" dark theme that is professional and easy on the eyes for long sessions.
+Color Palette:
+Backgrounds: Deep blues and navies (#1a1a2e, #162447) create a focused environment.
+Accent: A vibrant, high-contrast red (#e43f5a) is used for selection, buttons, and highlighting to draw user attention.
+Text: Off-white and gray tones (#e0e0e0, #a0a0a0) ensure readability.
+Typography: A clean, sans-serif font is used for its modern feel and legibility.
+Iconography: A consistent set of custom SVG icons provides clear visual cues for node types (Domain, System, etc.) and actions (Add, Edit, Delete).
+3.2. Interaction Flow
+Onboarding: The user is greeted with a welcome screen explaining the basic functionality.
+Exploration: The user can browse the initial data structure using the sidebar. Clicking a node selects it.
+Selection & Viewing:
+Selecting a "folder" node (e.g., "Systems Science") loads the DiagramView, showing its children ("Information Modeling", "Product Lifecycle Management") on the canvas.
+Selecting a "file" node (e.g., "Entity-Relationship Model") loads the NodeDetail view, triggering a Gemini API call and displaying the generated content.
+Manipulation:
+Adding: The user can add a root node from the sidebar header or a child node by hovering over any existing node in the sidebar or diagram.
+Editing: Hovering over a node reveals an edit icon. Clicking it enables an input field to rename the node.
+Deleting: A trash icon appears on hover, allowing the user to delete a node (with a confirmation prompt).
+Arranging: In the DiagramView, the user can click and drag nodes to organize them spatially.
+Navigation: Double-clicking a node in the DiagramView navigates to that node, making it the new context for the content view.
+4. Technical Architecture
+4.1. Frontend Stack
+Framework: React v18+ with TypeScript
+Rendering: React DOM
+Styling: Tailwind CSS with a custom theme configuration.
+AI Integration: @google/genai library for interacting with the Gemini API.
+Build/Dev: The project is structured as a modern frontend application, likely using a bundler like Vite or Create React App (though not explicitly defined, the structure is compatible).
+4.2. Data Model (types.ts)
+The core data structure is the SystemNode:
+code
+TypeScript
+export enum NodeType {
+  DOMAIN = 'DOMAIN',
+  SYSTEM = 'SYSTEM',
+  CONCEPT = 'CONCEPT',
+  MODEL = 'MODEL',
+  TOOL = 'TOOL'
+}
+
+export interface SystemNode {
+  id: string; // Unique identifier
+  name: string;
+  type: NodeType;
+  description: string;
+  children?: SystemNode[]; // Defines it as a "folder" type
+  position?: { x: number; y: number }; // For positioning in DiagramView
+}
+4.3. State Management
+A centralized approach is used, with the entire node tree (nodes) stored in the state of the top-level App component.
+State and update functions are passed down to child components as props (prop-drilling). This is suitable for the current application scale.
+Callbacks like onNodeUpdate, onNodeDelete bubble actions up from child components to the App component to modify the central state tree.
+4.4. Component Breakdown
+App.tsx: The application root. Manages all state, handles node manipulation logic, and orchestrates the main layout between the sidebar and content view.
+Sidebar.tsx: Renders the main navigation tree. Maps over the nodes data and uses the recursive TreeNode component.
+TreeNode.tsx: Represents a single item in the sidebar tree. Manages its own open/closed state, editing state, and displays hover actions.
+ContentView.tsx: A router-like component that conditionally renders the WelcomeScreen, DiagramView, or NodeDetail view based on whether a node is selected and if it has children.
+DiagramView.tsx: Manages the canvas for a "folder" node. It renders the parent context, child DiagramNode components, and the SVG lines connecting them. Contains the auto-layout logic.
+DiagramNode.tsx: A single draggable node on the diagram canvas. It handles its own position, drag-and-drop logic (including snapping), and in-place editing.
+NodeDetail.tsx: The view for a leaf node. It manages the API call lifecycle (isLoading, content), displays a loading spinner, and renders the Markdown-formatted response from the Gemini API.
+Icons.tsx: A component library of all SVG icons used in the UI, promoting consistency and reusability.
+services/geminiService.ts: An isolated service module responsible for all communication with the Gemini API. It constructs the prompt and handles the API call and basic error logging.
+4.5. Gemini API Integration
+Service: services/geminiService.ts
+Model: gemini-2.5-pro
+Prompt Engineering: The prompt is carefully crafted to give the AI a specific persona ("world-class systems architect") and a clear, structured format for its response. It asks for five specific sections:
+Core Definition
+Key Principles & Sub-components
+Conceptual Data Model
+High-Level Implementation Strategy
+Synergies & Connections
+This structured prompt ensures that the generated content is consistent, high-quality, and directly useful within the application's context.
+5. Potential Future Enhancements
+Persistence: Implement local storage or a backend database (like Firebase/Supabase) to save the user's system map between sessions.
+Collaboration: Add real-time collaboration features using WebSockets.
+Advanced Relationships: Allow users to draw custom links between nodes in the DiagramView to represent non-hierarchical relationships (e.g., "related to", "depends on").
+Import/Export: Add functionality to import/export the system map as JSON, YAML, or Markdown.
+Search: Implement a global search function to quickly find nodes within the hierarchy.
+Versioning: Allow users to save snapshots of the system map to track its evolution over time.
+

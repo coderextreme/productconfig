@@ -1,5 +1,3 @@
-I’m interested in building a system that focuses on Data/Information/Knowledge/Model/Product/Social/Marketing/Systems Science.
-
 Be sure that models for the following are featured:
 
 * 3D Skeleton
@@ -27,13 +25,3 @@ Be sure that models for the following are featured:
 * Circuit Layout, FPGA, Jed Donnelley's IMPACT processor
 * Grammar, Production Rule, Terminal, Non-terminal, Railroad diagram, Backus-Naur Form, Syntax Diagrams
 * Module, Class, Structure, Object, Node, Interface, Method, Function, Statement, Expression, Variable, Constant
-
-and combines them all into something configurable to craft one of them, possibly data driven.  Compilation from abstract to concrete artifacts should be possible.
-
-I don’t want to end up with something like Protege, OWL or RDF;  something higher level than React, CSS, HTML, and X_ITE or X3DOM is desired.  A 3D-4D interface is highly desirable 
-
-Perhaps a 6th generation language or graphical builder would work best, but at some point, the system should be save-able to and load-able from UTF-8, if only for transferring between databases.  Ideally, everything could be compiled to C++ and distributed as a native app, or in a distributed 3-tier form.  On the wire, it should start with Turing incomplete C++, but C++ is negotiable.  Ideally, people could use their own notation, and the notation would be pluggable into the system.
-
-I realize this is in the Lotus Notes/Shopify/Salesforce/Amazon/Product Lifecycle Management (PLM) market.  I am most familiar with PLM.
-
-I am trying to lift the industry beyond UI libraries and frameworks we’ve been stuck in for ages.   The focus should be on selecting and delivering products, not page design and layout.

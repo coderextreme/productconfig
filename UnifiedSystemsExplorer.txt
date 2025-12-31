@@ -1,0 +1,99 @@
+Design Document: Unified Systems Explorer
+1. Project Overview
+The Unified Systems Explorer is a highly interactive, visual web application for modeling and exploring complex systems. It combines a traditional hierarchical file explorer with a modern, UML/SysML-inspired diagramming canvas. Users can build, modify, and navigate system architectures in real-time. For terminal nodes (leaves of the hierarchy), the application leverages the Google Gemini API to generate deep, contextual analysis, transforming it from a simple organizer into a powerful knowledge generation tool.
+Core Features:
+Hierarchical System Modeling: Users can create a nested tree structure of system components, categorized by types like DOMAIN, SYSTEM, CONCEPT, MODEL, and TOOL.
+Full CRUD Functionality: The entire system hierarchy is dynamic. Users can create, rename, and delete any node or folder.
+Interactive Diagram Canvas: When viewing a "folder" (a node with children), the content area transforms into a 2D canvas. Each child node is represented as a movable block.
+Visual Relationship Mapping: The diagram view displays clear connector lines from the parent context to each child node, illustrating the system's structure.
+Drag & Drop Interface: Users can freely arrange nodes on the canvas to create custom layouts that persist within the session.
+AI-Powered Content Generation: When viewing a "file" (a node without children), the application calls the Gemini API to generate a detailed technical breakdown, including definitions, data models, implementation strategies, and system synergies.
+Responsive UI: The application features a collapsible sidebar, ensuring usability on both desktop and mobile devices.
+2. Technical Architecture
+The application is a client-side, single-page application built with modern web technologies.
+Frontend Framework: React v19+ with TypeScript
+Styling: Tailwind CSS with a custom theme. The configuration is defined directly in index.html for simplicity.
+AI Integration: The official @google/genai npm package is used for all interactions with the Gemini API.
+State Management: State is managed locally within React using the useState and useCallback hooks. The entire node tree is held in a single state object in the root App component, following a "single source of truth" pattern.
+Persistence: The application state is managed in-memory and is not persisted between sessions. The initial state is hardcoded.
+3. Data Structures
+The application revolves around a single, recursive data structure defined in types.ts.
+NodeType (Enum)
+Defines the possible categories for a system node.
+code
+TypeScript
+export enum NodeType {
+  DOMAIN = 'DOMAIN',
+  SYSTEM = 'SYSTEM',
+  CONCEPT = 'CONCEPT',
+  MODEL = 'MODEL',
+  TOOL = 'TOOL'
+}
+SystemNode (Interface)
+Represents a single node in the hierarchy.
+code
+TypeScript
+export interface SystemNode {
+  id: string; // Unique identifier (e.g., timestamp-based)
+  name: string; // Display name
+  type: NodeType; // Category from the enum
+  description: string; // A brief description
+  children?: SystemNode[]; // Optional array of child nodes
+  position?: { x: number; y: number }; // Optional coordinates for the diagram view
+}
+4. Component Breakdown
+App.tsx
+Role: The root component and state controller.
+Responsibilities:
+Initializes and manages the nodes state (the entire system tree).
+Manages the selectedNode state.
+Contains the core CRUD logic: handleAddNode, handleUpdateNode, handleDeleteNode. These functions perform immutable updates on the state tree.
+Renders the main layout, including Sidebar and ContentView.
+Handles the responsive sidebar's open/close state.
+Sidebar.tsx
+Role: The primary navigation and tree management interface.
+Responsibilities:
+Renders the nodes hierarchy using a recursive TreeNode component.
+Displays icons corresponding to each NodeType.
+Allows expanding and collapsing of parent nodes.
+On hover, displays action buttons (+, ✏️, 🗑️) for adding a child, renaming, or deleting a node.
+Handles inline editing for renaming nodes.
+Communicates user actions (selection, add, update, delete) back to the App component via props.
+ContentView.tsx
+Role: A conditional renderer for the main content area.
+Responsibilities:
+Displays a WelcomeScreen if no node is selected.
+If the selected node has a children array (even if empty), it renders the DiagramView component.
+If the selected node does not have a children array, it renders the NodeDetail component.
+DiagramView.tsx
+Role: The interactive diagramming canvas.
+Responsibilities:
+Displays the title and description of the parent node.
+Provides an "Add New Item" button.
+Renders a large, scrollable div that acts as the canvas.
+Auto-Layout: Implements a useEffect hook to calculate and apply initial positions for any child nodes that lack them, arranging them in a circle.
+Renders an SVG layer to draw connector lines from a central "Parent Context" point to each DiagramNode.
+Renders a DiagramNode component for each child.
+DiagramNode.tsx
+Role: A single, draggable block on the diagram canvas.
+Responsibilities:
+Renders the node's icon, name, and description.
+Manages its own drag-and-drop logic using native mouse events (onMouseDown, onMouseMove, onMouseUp).
+Updates its final position in the App state via the onNodeUpdate callback.
+Handles click vs. double-click detection (double-click navigates into the node).
+Displays hover controls for editing and deleting.
+NodeDetail.tsx
+Role: The AI-generated content viewer.
+Responsibilities:
+Displays the selected node's title and description.
+Shows a loading spinner while fetching data.
+Triggers a call to geminiService.generateNodeDetails when the selected node changes.
+Renders the returned Markdown response from the Gemini API with appropriate formatting.
+services/geminiService.ts
+Role: The API service layer for Gemini.
+Responsibilities:
+Initializes the GoogleGenAI client.
+Exports an async function generateNodeDetails that takes a SystemNode as input.
+Constructs a detailed, structured prompt for the Gemini gemini-2.5-pro model based on the node's properties.
+Handles the API call and returns the response.text.
+Includes basic error handling.
